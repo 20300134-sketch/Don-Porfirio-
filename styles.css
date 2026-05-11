@@ -1,5 +1,13 @@
 /* --- BASE Y VARIABLES --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* FIX TELEFONO: Evita el desplazamiento lateral y el espacio blanco */
+html, body { 
+    overflow-x: hidden; 
+    width: 100%;
+    position: relative;
+}
+
 :root {
     --color-primary: #1a1a1a;
     --color-secondary: #d4af37; /* Dorado Don Porfirio */
@@ -7,7 +15,7 @@
 }
 html { scroll-behavior: smooth; }
 body { font-family: 'Segoe UI', sans-serif; background-color: var(--color-bg); }
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; width: 100%; }
 
 /* --- HEADER --- */
 .header {
@@ -17,6 +25,7 @@ body { font-family: 'Segoe UI', sans-serif; background-color: var(--color-bg); }
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
 }
 .header-container { display: flex; justify-content: space-between; align-items: center; }
 .logo h1 { display: flex; align-items: center; gap: 15px; color: var(--color-secondary); }
@@ -32,6 +41,7 @@ body { font-family: 'Segoe UI', sans-serif; background-color: var(--color-bg); }
     padding: 80px 20px; 
     text-align: center;
     border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    width: 100%;
 }
 .hero-logo-container { 
     margin-bottom: 30px; 
@@ -71,6 +81,7 @@ body { font-family: 'Segoe UI', sans-serif; background-color: var(--color-bg); }
     background-color: #000000;
     padding: 40px 0;
     border-bottom: 1px solid var(--color-secondary);
+    width: 100%;
 }
 
 .categorias-grid {
@@ -130,6 +141,7 @@ body { font-family: 'Segoe UI', sans-serif; background-color: var(--color-bg); }
     gap: 20px;
     padding: 40px 0;
     background-color: var(--color-bg);
+    width: 100%;
 }
 
 .linea-dorada {
@@ -152,6 +164,7 @@ body { font-family: 'Segoe UI', sans-serif; background-color: var(--color-bg); }
     display: flex;
     flex-direction: column;
     align-items: center; /* MODIFICADO: Centra el contenido del catálogo */
+    width: 100%;
 }
 
 .nivel-section { 
@@ -323,14 +336,16 @@ body { font-family: 'Segoe UI', sans-serif; background-color: var(--color-bg); }
 }
 
 /* --- CONTACTO --- */
-.contacto { background: #ffffff; color: #000000 !important; padding: 60px 0; text-align: center; }
+.contacto { background: #ffffff; color: #000000 !important; padding: 60px 0; text-align: center; width: 100%; }
 .contacto h2 { color: #000000 !important; margin-bottom: 20px; font-size: 2.2rem; }
 
 .contact-info { 
     display: grid; 
     grid-template-columns: repeat(5, 1fr); 
     gap: 15px; 
-    margin-top: 40px; 
+    margin: 40px auto 0;
+    max-width: 1200px;
+    padding: 0 20px;
 }
 
 .info-item { 
@@ -380,7 +395,7 @@ body { font-family: 'Segoe UI', sans-serif; background-color: var(--color-bg); }
 
 .info-item h3 { font-size: 1.1rem; text-transform: uppercase; margin-bottom: 8px; color: var(--color-primary); }
 
-.footer { background: #111; color: #777; text-align: center; padding: 20px 0; border-top: 1px solid var(--color-secondary); }
+.footer { background: #111; color: #777; text-align: center; padding: 20px 0; border-top: 1px solid var(--color-secondary); width: 100%; }
 
 /* --- RESPONSIVE / QR OPTIMIZACIÓN --- */
 @media (max-width: 1000px) { 
